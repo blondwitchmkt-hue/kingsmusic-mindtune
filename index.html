@@ -287,6 +287,46 @@ html{ scroll-behavior: smooth; scroll-padding-top: 88px; }
 #pubsite .menu .btn{ width: 100%; }}
 @media (prefers-reduced-motion: reduce){html{ scroll-behavior: auto; }
 #pubsite *{ transition: none !important; }}
+#pubsite .prog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s3);margin-top:var(--s5)}
+#pubsite .prog{background:#fff;border:1px solid var(--line);border-radius:28px;padding:clamp(24px,3.4vw,40px);box-shadow:0 32px 64px -48px rgba(38,50,95,.35)}
+#pubsite .prog-k{font-size:var(--fs-cap);font-weight:700;letter-spacing:.08em;color:var(--lav-deep);margin:0}
+#pubsite .prog h3{margin:10px 0 14px;font-size:1.5rem}
+#pubsite .prog p{margin:0 0 14px}
+#pubsite .flow{list-style:none;margin:18px 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 6px;align-items:center}
+#pubsite .flow li{background:var(--lav-tint);color:var(--lav-deep);font-weight:700;font-size:var(--fs-small);padding:6px 14px;border-radius:99px}
+#pubsite .flow li+li::before{content:"→";margin-right:10px;color:var(--lav)}
+#pubsite .prog-eg{background:var(--lav-tint);border-radius:18px;padding:16px 20px;margin:0 0 14px}
+#pubsite .prog-eg b{display:block;margin-bottom:6px}
+#pubsite .prog-eg p{margin:0}
+#pubsite .prog-note{color:var(--muted);font-size:var(--fs-small)}
+#pubsite .tuition{margin-top:var(--s6);background:#fff;border:1px solid var(--line);border-radius:28px;padding:clamp(24px,4vw,48px)}
+#pubsite .tuition-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:var(--s3)}
+#pubsite .tuition-head h3{margin:0;font-size:1.625rem}
+#pubsite .tuition-head span{color:var(--muted);font-size:var(--fs-small)}
+#pubsite .tu-sec{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding:var(--s3) 0 10px;margin-bottom:var(--s2)}
+#pubsite .tu-sec span{color:var(--muted);font-size:var(--fs-small)}
+#pubsite .tu-t{margin:0;font-weight:700;font-size:1.25rem;display:flex;gap:14px;align-items:baseline}
+#pubsite .tu-t i{font-style:normal;font-size:var(--fs-small);color:var(--lav-deep)}
+#pubsite .tu-wrap{overflow-x:auto}
+#pubsite .tu-table{width:100%;border-collapse:collapse;min-width:460px;font-size:var(--fs-body)}
+#pubsite .tu-table thead th{background:var(--navy,#26325f);color:#fff;text-align:left;font-size:var(--fs-small);padding:12px 16px}
+#pubsite .tu-table thead th:nth-child(n+3){text-align:right}
+#pubsite .tu-table tbody th{text-align:left;padding:14px 16px}
+#pubsite .tu-table td{padding:14px 16px;color:var(--muted)}
+#pubsite .tu-table td:nth-child(n+3){text-align:right;font-weight:700;color:var(--ink,#1c2347);font-variant-numeric:tabular-nums}
+#pubsite .tu-table tbody tr:nth-child(even){background:var(--lav-tint)}
+#pubsite .tu-small{color:var(--muted);font-size:var(--fs-small);margin:10px 0 0}
+#pubsite .tu-box{margin-top:var(--s2);background:var(--lav-tint);border-left:4px solid var(--lav);border-radius:0 14px 14px 0;padding:14px 20px;display:grid;gap:2px}
+#pubsite .tu-box span{color:var(--muted);font-size:var(--fs-small)}
+#pubsite .tu-price{display:grid;grid-template-columns:1fr 1fr;gap:var(--s2)}
+#pubsite .tu-price div{background:var(--lav-tint);border-radius:18px;padding:18px 22px;display:grid;gap:4px}
+#pubsite .tu-price div.alt b{color:var(--lav-deep)}
+#pubsite .tu-price span{font-size:var(--fs-small);font-weight:700}
+#pubsite .tu-price b{font-size:1.75rem}
+@media (max-width:860px){#pubsite .prog-grid{grid-template-columns:1fr}}
+#pubsite .tu-price b{white-space:nowrap}
+@media (max-width:520px){#pubsite .tu-price{grid-template-columns:1fr}
+#pubsite .tu-price b{font-size:1.5rem}}
 #pubsite .trial-logo{width:140px;height:auto;display:block;margin-bottom:16px}
 #pubsite .brand-logo{height:44px;width:auto;display:block}
 #pubsite .brand-x{display:none}
@@ -379,6 +419,14 @@ html,#appRoot{margin:0}
 #appRoot .bar{height:8px;border-radius:99px;background:#e9ebf4;overflow:hidden;margin:8px 0 6px}
 #appRoot .bar i{display:block;height:100%;background:var(--purple);width:0;transition:width .2s}
 #appRoot .progcard small{color:var(--ink2);font-size:13px}
+#appRoot .axtabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;margin:0 0 4px;border-bottom:1px solid var(--line);scrollbar-width:thin}
+#appRoot .axtab{flex:none;min-height:44px;padding:0 16px;border-radius:99px;border:1px solid var(--line);background:#fff;color:#6e7898;cursor:pointer;font-size:14px;font-weight:600;display:inline-flex;gap:8px;align-items:center;white-space:nowrap}
+#appRoot .axtab small{font-size:11px;font-weight:700;color:#9aa3bd}
+#appRoot .axtab.on{background:var(--purple-l);border-color:var(--purple-b);color:var(--purple-d)}
+#appRoot .axtab.full small{color:var(--purple-d)}
+#appRoot .axtab.res{background:#fff}
+#appRoot .axnav{display:flex;justify-content:space-between;gap:10px;margin:22px 0 8px}
+#appRoot .axnav .btn[disabled]{opacity:.4;cursor:default}
 #appRoot .axchips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;margin-bottom:6px}
 #appRoot .axchip{flex:none;min-height:40px;padding:0 14px;border-radius:99px;border:1px solid var(--line);background:#fff;color:#6e7898;cursor:pointer;font-size:13px;display:inline-flex;gap:8px;align-items:center}
 #appRoot .axchip i{width:10px;height:10px;border-radius:50%;display:inline-block}
@@ -708,6 +756,57 @@ html,#appRoot{margin:0}
     <div class="note">
       <p>진로·입시를 고민하고 계신가요? 맞춤 상담에서 ‘진로·입시 준비’를 선택해 주세요. 목표와 현재 준비 상태부터 함께 살펴봅니다.</p>
       <button class="btn ghost sm" type="button" id="entrance">진로·입시로 상담 시작</button>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="section" id="programs">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Our method</p>
+      <h2>킹스뮤직은 이렇게 가르칩니다</h2>
+      <p class="lead">아이에게 맞는 방법으로 배우고,<br>음악으로 자신을 표현합니다.</p>
+    </div>
+    <div class="prog-grid">
+      <article class="prog">
+        <p class="prog-k">01 · 주 3회 피아노 과정 중 하루</p>
+        <h3>마음을 표현하는 힐링 뮤직</h3>
+        <p>다양한 악기로, 정해진 악보 없이 내 느낌을 표현합니다.<br>친구와 소리를 주고받고 함께 음악을 만듭니다.</p>
+        <ol class="flow" aria-label="수업 흐름"><li>악기 고르기</li><li>마음 표현</li><li>소리 대화</li><li>함께 연주</li></ol>
+        <p>마음 표현과 서로 어울리기, 창의적인 음악 만들기를 연습합니다.</p>
+        <p class="prog-note">음악치료의 즉흥연주 방식을 접목한 음악교육 프로그램입니다.</p>
+      </article>
+      <article class="prog">
+        <p class="prog-k">02 · 음악반응 프로파일과 마이 레퍼토리</p>
+        <h3>우리 아이에게 맞추는 피아노</h3>
+        <p>첫 만남에서 아이의 음악적 반응과 수준을 살피고,<br>그 결과에 맞춰 곡과 가르치는 방법을 정합니다.</p>
+        <ol class="flow" aria-label="수업 흐름"><li>음악반응 살피기</li><li>맞춤 선곡과 레슨</li><li>나만의 곡 쌓기</li></ol>
+        <div class="prog-eg"><b>예를 들어 집중이 짧게 이어지는 아이라면</b>
+          <p>짧고 반복이 분명한 곡을 고릅니다.<br>두 마디씩 작게 완성한 뒤 연결하며, 자기 곡으로 익혀 갑니다.</p></div>
+        <p class="prog-note">잘 반응하는 방법에서 시작해 피아노의 기초와 표현을 함께 배웁니다.</p>
+      </article>
+    </div>
+
+    <div class="tuition" id="tuition">
+      <div class="tuition-head"><h3>교육과정 · 교육비 안내</h3><span>음악을 배우고, 나답게 표현하는 시간</span></div>
+      <div class="tu-sec"><p class="tu-t"><i>01</i>피아노</p><span>월 교육비</span></div>
+      <div class="tu-wrap"><table class="tu-table">
+        <thead><tr><th>수업 단계</th><th>교재 과정</th><th>주 3회</th><th>주 2회</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">기초반</th><td>기초 과정</td><td>160,000원</td><td>140,000원</td></tr>
+          <tr><th scope="row">중급반 1</th><td>체르니 100번 과정</td><td>170,000원</td><td>150,000원</td></tr>
+          <tr><th scope="row">중급반 2</th><td>체르니 30번 과정</td><td>180,000원</td><td>160,000원</td></tr>
+          <tr><th scope="row">고급반</th><td>고급 과정</td><td>190,000원</td><td>170,000원</td></tr>
+        </tbody></table></div>
+      <p class="tu-small">단계가 올라갈 때마다 월 교육비가 10,000원씩 인상됩니다.</p>
+      <div class="tu-box"><b>주 3회 피아노 수업</b><span>1회 60분 | 연습 · 레슨 · 이론</span><span>주 1회는 피아노 레슨 후 힐링 뮤직 시간이 있습니다.</span></div>
+      <div class="tu-sec"><p class="tu-t"><i>02</i>힐링 노래</p><span>주 1회</span></div>
+      <div class="tu-price">
+        <div><span>그룹 수업</span><b>80,000원</b></div>
+        <div class="alt"><span>개인 수업</span><b>160,000원</b></div>
+      </div>
+      <p class="tu-small">모든 금액은 월 교육비 기준입니다.</p>
     </div>
   </div>
 </section>
@@ -1200,7 +1299,7 @@ const AXF=[
    ========================================================= */
 const KEYS={real:'kmm.db.v2',demo:'kmm.demo.v2'};
 let MODE='real',STORAGE_OK=true,DB={order:[],records:{},current:null},S=null;
-let UI={set:'today',adminTab:'kids',q:'',fGroup:'',fStatus:''};
+let UI={ax:0,set:'today',adminTab:'kids',q:'',fGroup:'',fStatus:''};
 const SHOWMISS={1:false,2:false,3:false};
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -1394,10 +1493,16 @@ function qHTML(q,kind,set){
 }
 function ansStore(key){return key[0]==='p'?S.parent.a:key[0]==='r'?S.teacher.re.a:S.teacher.a}
 function memoStore(key){return key[0]==='r'?S.teacher.re.m:S.teacher.m}
+function axisCount(i,set){let n=0,t=0;TQ.filter(q=>q.d===i).forEach(q=>{t++;const key=set==='re'?'r'+q.n:q.id;const v=ansStore(key)[key];if(isNum(v)||v==='na')n++});return[n,t]}
 function axisBlocks(kind,set){
   const Q=kind==='p'?PQ:TQ;
-  return `<div class="axchips" role="navigation" aria-label="영역 이동">${AX.map((a,i)=>`<button class="axchip" data-act="scrollax:${i}"><i style="background:${a.color}"></i>${a.name}</button>`).join('')}</div>`+
-  AX.map((a,i)=>`<div class="axhead" id="ax-${i}"><div class="eyebrow">AREA 0${i+1} / 06</div><h2><i style="background:${a.color}"></i>${a.name}</h2><p>${a.desc}</p></div>`+Q.filter(q=>q.d===i).map(q=>qHTML(q,kind,set)).join('')).join('');
+  if(kind!=='t'){return `<div class="axchips" role="navigation" aria-label="영역 이동">${AX.map((a,i)=>`<button class="axchip" data-act="scrollax:${i}"><i style="background:${a.color}"></i>${a.name}</button>`).join('')}</div>`+
+  AX.map((a,i)=>`<div class="axhead" id="ax-${i}"><div class="eyebrow">AREA 0${i+1} / 06</div><h2><i style="background:${a.color}"></i>${a.name}</h2><p>${a.desc}</p></div>`+Q.filter(q=>q.d===i).map(q=>qHTML(q,kind,set)).join('')).join('')}
+  const i=Math.max(0,Math.min(5,UI.ax|0)),a=AX[i];
+  const tabs=`<div class="axtabs" role="tablist" aria-label="관찰 영역">${AX.map((x,j)=>{const[n,t]=axisCount(j,set);return `<button class="axtab ${j===i?'on':''} ${n===t?'full':''}" role="tab" aria-selected="${j===i}" data-act="axtab:${j}">${x.name}<small>${n}/${t}</small></button>`}).join('')}<button class="axtab res" data-act="goto:4">결과지</button></div>`;
+  const head=`<div class="axhead" id="ax-${i}"><div class="eyebrow">AREA 0${i+1} / 06</div><h2><i style="background:${a.color}"></i>${a.name}</h2><p>${a.desc}</p></div>`;
+  const nav=`<div class="axnav"><button class="btn" data-act="axtab:${i-1}" ${i===0?'disabled':''}>이전 영역</button>${i<5?`<button class="btn pri" data-act="axtab:${i+1}">다음 영역</button>`:`<button class="btn pri" data-act="goto:4">결과지 보기</button>`}</div>`;
+  return tabs+head+Q.filter(q=>q.d===i).map(q=>qHTML(q,kind,set)).join('')+nav;
 }
 function progCard(kind,set){
   const Q=kind==='p'?PQ:TQ;let n=0;
@@ -1463,7 +1568,7 @@ function missingPanel(m){
   const li=[];
   if(m.info.length)li.push(`<li>기본 정보: ${m.info.join(', ')} <button data-act="goto:1">이동</button></li>`);
   if(m.parent.length)li.push(`<li>보호자 질문지: ${m.parent.length}문항 미응답 (${m.parent.join(', ')}번) <button data-act="goto:2">이동</button></li>`);
-  if(m.teacher.length)li.push(`<li>원장님 관찰지: ${m.teacher.length}문항 미응답 (${m.teacher.join(', ')}번) <button data-act="goto:3">이동</button></li>`);
+  if(m.teacher.length)li.push(`<li>원장님 관찰지: ${m.teacher.length}문항 미응답 (${m.teacher.join(', ')}번) <button data-act="axfirst">이동</button></li>`);
   if(m.ctx.length)li.push(`<li>수업 맥락: ${m.ctx.join(', ')} <button data-act="goto:3">이동</button></li>`);
   return `<h1 class="page-title">결과를 만들기 전에 확인이 필요해요</h1><div class="card"><p style="margin-top:0">아래 항목이 비어 있어요. 채운 뒤에 결과지를 만들 수 있어요. 원장님 관찰지는 “관찰 기회 없음”도 정상 응답이에요.</p><ul class="check-list">${li.join('')}</ul></div>`;
 }
@@ -1801,6 +1906,7 @@ function ask(title,msg,okLabel,cb){$('#cfTitle').textContent=title;$('#cfMsg').t
 function updateProg(kind,set){
   const Q=kind==='p'?PQ:TQ;let n=0;Q.forEach(q=>{const key=kind==='p'?q.id:(set==='re'?'r'+q.n:q.id);const v=ansStore(key)[key];if(isNum(v)||v==='na')n++});
   const el=$('#progN');if(el){el.textContent=n;$('#progBar').style.width=(n/Q.length*100)+'%'}
+  if(kind==='t')document.querySelectorAll('.axtab[data-act^="axtab:"]').forEach(b=>{const j=+b.dataset.act.split(':')[1],[c,t]=axisCount(j,set);const sm=b.querySelector('small');if(sm)sm.textContent=c+'/'+t;b.classList.toggle('full',c===t)})
 }
 function setAnswer(key,val){
   const store_=ansStore(key);
@@ -1851,6 +1957,8 @@ document.addEventListener('click',e=>{
    case 'next':go(S.step+1);break;
    case 'goto':go(+arg);break;
    case 'set':UI.set=arg;render();break;
+   case 'axtab':{const n=+arg;if(n>=0&&n<=5){UI.ax=n;render();window.scrollTo(0,0)}break}
+   case 'axfirst':{const q=TQ.find(q=>{const v=ansStore(q.id)[q.id];return !(isNum(v)||v==='na')});UI.set='today';UI.ax=q?q.d:0;SHOWMISS[3]=true;S.step=3;save();render();break}
    case 'scrollax':{const el=document.getElementById('ax-'+arg);el&&el.scrollIntoView({behavior:'smooth',block:'start'});break}
    case 'clr':setAnswer(arg,undefined);break;
    case 'demo-open':$('#dlgDemo').showModal();break;
